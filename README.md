@@ -70,4 +70,4 @@ Die ausführliche Dokumentation liegt im **Wiki** dieses Repos:
 | Rolle | Name |
 |-------|------|
 | Entwickler | Adrian |
-| Entwickler | [Partner] |
+| Entwickler | Julian |
