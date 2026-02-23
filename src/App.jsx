@@ -1,10 +1,9 @@
-import React from 'react'
-
-export default function App() {
+function App() {
   return (
-    <div className="app">
-      <h1>Website Playground</h1>
-      <p>Starten Sie den Dev-Server mit <code>npm run dev</code>.</p>
+    <div>
+      <h1>Gainly funktioniert!</h1>
     </div>
   )
 }
+
+export default App
