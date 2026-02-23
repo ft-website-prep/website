@@ -1,53 +1,88 @@
-# website
+# 🏋️ Gainly
 
-Playground for all preparation steps for the entire website design
-Dieses Repository enthält ein kleines Vite + React Playground-Scaffold, damit Sie schnell mit der Entwicklung einer Website beginnen können.
+**Die Calisthenics & Fitness Community App mit Gamification.**
 
-Annahmen
+Gainly kombiniert Workout-Tracking, Community-Features und ein Gamification-System (XP, Ligen, Achievements) zu einer App, die Fitness motivierend und sozial macht.
 
-- Sie arbeiten mit macOS / zsh.
-- Sie möchten ein leichtgewichtiges, modernes Frontend-Setup (Vite + React).
+---
 
-Was enthalten ist
+## 🛠 Tech Stack
 
-- `package.json` – Scripts: `dev`, `build`, `preview`.
-- `index.html` – Einstiegspunkt.
-- `src/main.jsx`, `src/App.jsx`, `src/styles.css` – Minimale React-App.
-- `.gitignore` – übliche Ignorier-Regeln.
+| Bereich | Technologie | Zweck |
+|---------|------------|-------|
+| Frontend | React + Vite | UI & Entwicklungsserver |
+| Styling | Tailwind CSS | Utility-First CSS |
+| Animationen | Framer Motion, GSAP, Lenis | Scroll- & UI-Animationen |
+| Backend | Supabase (PostgreSQL) | Datenbank, Auth, Storage, Realtime |
+| Routing | React Router | Seitennavigation |
 
-Schnellstart (lokal)
+---
 
-1. Node.js installieren (empfohlen: Node 18+). Prüfen: `node -v`
-2. Abhängigkeiten installieren:
+## 🚀 Lokale Einrichtung
+
+**Voraussetzungen:** Node.js 18+ (`node -v` zum Prüfen)
 
 ```bash
-cd /path/to/website-1
+git clone https://github.com/EUER-USERNAME/gainly.git
+cd gainly
 npm install
 ```
 
-3. Dev-Server starten:
+Erstelle eine `.env`-Datei im Root-Verzeichnis:
+
+```
+VITE_SUPABASE_URL=https://euer-projekt.supabase.co
+VITE_SUPABASE_ANON_KEY=euer-anon-key
+```
+
+Die Werte findest du im Supabase Dashboard unter **Settings → API**.
+
+> ⚠️ Die `.env`-Datei wird NICHT in Git gepusht. Jedes Teammitglied muss sie lokal erstellen.
+
+Dev-Server starten:
 
 ```bash
 npm run dev
 ```
 
-4. Build erstellen:
+---
+
+## 🗄 Datenbank
+
+23 Tabellen auf **Supabase** (PostgreSQL), Region **Frankfurt (eu-central-1)**.
+
+| Phase | Inhalt | Tabellen |
+|-------|--------|----------|
+| Phase 1 | Core (Exercises, Workouts, Logs) | 8 |
+| Phase 2 | Gamification (XP, Achievements, Rewards) | 5 |
+| Phase 3 | Community (Friends, Groups, Posts, Challenges) | 10 |
+
+**Liga-System:** Rookie → Grinder → Athlete → Beast → Legend
+
+Komplette Dokumentation: `docs/database/gainly-db-dokumentation.md`
+
+---
+
+## 🔀 Git Workflow
 
 ```bash
-npm run build
-npm run preview
+git add .
+git commit -m "feat: Beschreibung"
+git push
 ```
 
-Edge-Cases / Hinweise
+| Prefix | Wann | Beispiel |
+|--------|------|---------|
+| `feat:` | Neues Feature | `feat: Login-Seite` |
+| `fix:` | Bug behoben | `fix: Streak-Counter` |
+| `docs:` | Dokumentation | `docs: README aktualisiert` |
+| `style:` | Design/CSS | `style: Button-Farben` |
 
-- Wenn Sie TypeScript, Next.js, Astro oder ein anderes Framework bevorzugen, kann ich das Scaffold entsprechend anpassen.
-- Falls Sie einen Proxy, Umgebungsvariablen oder CI konfigurieren möchten, beschreiben Sie kurz Ihr Ziel — ich richte das ergänzend ein.
+---
 
-Nächste Schritte (optional)
+## 👥 Team
 
-- TypeScript hinzufügen
-- Routing (React Router)
-- CSS-Framework (Tailwind)
-- Deployment: Vercel / Netlify / GitHub Pages — ich kann eine Deploy-Config hinzufügen.
-
-Viel Erfolg — sagen Sie mir, welche Erweiterung Sie als nächstes möchten.
+| Rolle | Name |
+|-------|------|
+| Entwickler | Adrian |
+| Entwickler | [Partner] |
